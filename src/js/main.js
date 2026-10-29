@@ -20,8 +20,8 @@
 
   /* Видео: грузим только когда видно, без звука; при reduced-motion и экономии трафика — постер */
   const videos = $$('video[data-src]');
-  const load = v => { if (!v.src) { v.src = v.dataset.src; } };
-  const play = v => { load(v); const p = v.play(); if (p) p.catch(() => {}); };
+  const load = v => { if (!v.src && v.dataset.src) { v.src = v.dataset.src; } };
+  const play = v => { if (v.tagName !== 'VIDEO') return; load(v); const p = v.play(); if (p) p.catch(() => {}); };
   if (!reduce && !saveData && 'IntersectionObserver' in window) {
     const vio = new IntersectionObserver(es => es.forEach(e => {
       const v = e.target;
@@ -113,7 +113,7 @@
     if (i === cur) return; cur = i;
     sv.forEach((v, j) => {
       v.classList.toggle('is-on', j === i);
-      if (j === i) { if (!reduce && !saveData) play(v); } else v.pause();
+      if (j === i) { if (!reduce && !saveData) play(v); } else if (v.pause) v.pause();
     });
     bars.forEach((b, j) => b.classList.toggle('is-on', j <= i));
   };
@@ -126,7 +126,7 @@
   // подгружаем первое видео сюжета, когда секция близко
   const story = $('#story');
   if (story && !reduce && !saveData && 'IntersectionObserver' in window) {
-    const pre = new IntersectionObserver(es => { if (es[0].isIntersecting) { load(sv[0]); pre.disconnect(); } }, { rootMargin: '600px 0px' });
+    const pre = new IntersectionObserver(es => { if (es[0].isIntersecting) { load(sv[1]); pre.disconnect(); } }, { rootMargin: '600px 0px' });
     pre.observe(story);
   }
 

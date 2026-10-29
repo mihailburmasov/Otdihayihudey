@@ -75,7 +75,6 @@ def jsonld():
         "telephone": facts["phone_href"],
         "image": site_url + "/media/og.jpg",
         "logo": site_url + "/img/logo.svg",
-        "priceRange": "₽₽",
         "areaServed": facts["city"],
     }
     if known("address_street"):
@@ -110,9 +109,11 @@ def render(text, path):
     text = re.sub(r"\{\{(\w+)\|url\}\}", lambda m: html.escape(str(raw(m.group(1)))) or "#book", text)
     canonical = site_url + (path or "/404.html")
     host = re.sub(r"^https?://", "", raw("site_url")).strip("/") if known("site_url") else "otdihayihudey"
-    builtins = {"site_url": site_url, "canonical": canonical, "ver": ver, "year": time.strftime("%Y"),
+    geo = raw("geo")
+    map_url = f"https://yandex.ru/maps/?pt={geo[1]},{geo[0]}&amp;z=17&amp;l=map" if geo else ""
+    builtins = {"map_url": map_url, "site_url": site_url, "canonical": canonical, "ver": ver, "year": time.strftime("%Y"),
                 "robots": "index, follow" if PROD else "noindex, nofollow", "utm_campaign": host}
-    text = re.sub(r"\{\{(site_url|canonical|ver|year|robots|utm_campaign)\}\}", lambda m: builtins[m.group(1)], text)
+    text = re.sub(r"\{\{(map_url|site_url|canonical|ver|year|robots|utm_campaign)\}\}", lambda m: builtins[m.group(1)], text)
     text = re.sub(r"\{\{(\w+)\}\}", lambda m: render_value(m.group(1)) if m.group(1) in facts else m.group(0), text)
     if "{{jsonld}}" in text:
         blocks = [jsonld()]
@@ -128,6 +129,9 @@ def render(text, path):
     if left:
         sys.exit(f"Неизвестные плейсхолдеры в {path}: {set(left)}")
     n = text.count("data-draft")
+    s = text.count("data-stock")
+    if s:
+        problems.append(f"stock  {s} стоковых видео (data-stock) на {path or '404'} — заменить на реальные съёмки")
     if n:
         problems.append(f"draft  {n} черновых текстовых блоков (data-draft) на {path or '404'}")
     if PROD:

@@ -359,7 +359,7 @@ p{margin:0 0 1em}
   .intro__pic--b{grid-column:4/7;margin-top:30%}
   .intro__pic--c{display:none}
   .story__stage::after{background:linear-gradient(0deg,rgba(28,21,17,.92) 15%,rgba(28,21,17,.25) 60%,rgba(28,21,17,.5))}
-  .story__step{justify-content:flex-end;padding-bottom:calc(110px + 6vh)}
+  .story__step{justify-content:flex-end;padding-bottom:calc(130px + 14vh)}
   .story__progress{top:auto;bottom:auto;right:16px;top:90px;transform:none;flex-direction:row}
   .story__progress i{width:26px;height:2px}
   .mbar{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:120;gap:8px;padding:6px;border-radius:999px;background:rgba(42,33,27,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);transform:translateY(150%);transition:transform .6s var(--ease)}

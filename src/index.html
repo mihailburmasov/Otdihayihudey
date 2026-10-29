@@ -56,11 +56,11 @@
 <!-- Первый экран: два мира -->
 <section class="hero" aria-labelledby="hero-title">
   <a class="hero__panel hero__panel--spa" href="#spa">
-    <video class="hero__video" data-src="media/video/hero-spa.mp4" poster="media/video/hero-spa.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <video data-stock class="hero__video" data-src="media/video/hero-spa.mp4" poster="media/video/hero-spa.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
     <span class="hero__label"><em>01</em>Спа-ритуалы<small>тепло · тишина · забота</small></span>
   </a>
   <a class="hero__panel hero__panel--move" href="#hall">
-    <video class="hero__video" data-src="media/video/hero-move.mp4" poster="media/video/hero-move.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <video data-stock class="hero__video" data-src="media/video/hero-move.mp4" poster="media/video/hero-move.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
     <span class="hero__label"><em>02</em>Зал движения<small>йога · пилатес · медитации</small></span>
   </a>
   <div class="hero__center">
@@ -87,10 +87,10 @@
 
 <!-- Дыхательная пауза -->
 <section class="breath" id="breath" aria-labelledby="breath-title">
-  <video class="breath__video" data-src="media/video/breath-candles.mp4" poster="media/video/breath-candles.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+  <video data-stock class="breath__video" data-src="media/video/breath-candles.mp4" poster="media/video/breath-candles.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
   <div class="breath__inner">
     <h2 class="breath__title" id="breath-title">Сделайте паузу прямо сейчас</h2>
-    <p class="breath__lead">Минута дыхания — так начинается каждый визит к&nbsp;нам. Попробуйте.</p>
+    <p class="breath__lead" data-draft>Минута дыхания — так начинается каждый визит к&nbsp;нам. Попробуйте.</p>
     <div class="breath__circle" id="breathCircle" aria-live="polite">
       <span class="breath__ring" aria-hidden="true"></span>
       <span class="breath__word" id="breathWord">готовы?</span>
@@ -110,10 +110,10 @@
 
   <div class="story" id="story">
     <div class="story__stage" aria-hidden="true">
-      <video class="story__v is-on" data-src="media/video/ritual-tea.mp4" poster="media/video/ritual-tea.webp" muted loop playsinline preload="none"></video>
-      <video class="story__v" data-src="media/video/ritual-candles.mp4" poster="media/video/ritual-candles.webp" muted loop playsinline preload="none"></video>
-      <video class="story__v" data-src="media/video/ritual-hands.mp4" poster="media/video/ritual-hands.webp" muted loop playsinline preload="none"></video>
-      <video class="story__v" data-src="media/video/ritual-quiet.mp4" poster="media/video/ritual-quiet.webp" muted loop playsinline preload="none"></video>
+      <img class="story__v is-on" src="img/space/tea.webp" alt="" width="960" height="1280" loading="lazy">
+      <video data-stock class="story__v" data-src="media/video/ritual-candles.mp4" poster="media/video/ritual-candles.webp" muted loop playsinline preload="none"></video>
+      <video data-stock class="story__v" data-src="media/video/ritual-hands.mp4" poster="media/video/ritual-hands.webp" muted loop playsinline preload="none"></video>
+      <video data-stock class="story__v" data-src="media/video/ritual-quiet.mp4" poster="media/video/ritual-quiet.webp" muted loop playsinline preload="none"></video>
       <div class="story__progress"><i></i><i></i><i></i><i></i></div>
     </div>
     <ol class="story__steps" data-draft>
@@ -126,7 +126,7 @@
 
   <div class="rituals" data-draft>
     <article class="ritual reveal">
-      <div class="ritual__media"><video data-src="media/video/spa-back.mp4" poster="media/video/spa-back.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="ritual__media"><video data-stock data-src="media/video/spa-massage.mp4" poster="media/video/spa-massage.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
       <h3>Расслабляющие ритуалы</h3>
       <p>Массаж с тёплым маслом, чтобы снять усталость недели и выспаться так, как давно не получалось.</p>
       <a class="link" href="{{yclients_spa|url}}" data-book="spa">Выбрать время</a>
@@ -138,13 +138,13 @@
       <a class="link" href="{{yclients_spa|url}}" data-book="spa">Выбрать время</a>
     </article>
     <article class="ritual reveal">
-      <div class="ritual__media"><video data-src="media/video/ritual-silence.mp4" poster="media/video/ritual-silence.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="ritual__media"><video data-stock data-src="media/video/ritual-silence.mp4" poster="media/video/ritual-silence.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
       <h3>Ритуалы для лица</h3>
       <p>Лифтинг-массаж и уход, после которых лицо выглядит отдохнувшим — даже если неделя была длинной.</p>
       <a class="link" href="{{yclients_spa|url}}" data-book="spa">Выбрать время</a>
     </article>
   </div>
-  <p class="spa__note">Длительность и стоимость каждого ритуала видны при онлайн-бронировании.</p>
+  <p class="spa__note" data-draft>Длительность и стоимость каждого ритуала видны при онлайн-бронировании.</p>
   <div class="center"><a class="btn btn--gold" href="{{yclients_spa|url}}" data-book="spa">Забронировать спа-ритуал</a></div>
 </section>
 
@@ -157,21 +157,21 @@
   </div>
   <div class="classes">
     <article class="cls reveal">
-      <div class="cls__media"><video data-src="media/video/move-stretch.mp4" poster="media/video/move-stretch.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="cls__media"><video data-stock data-src="media/video/move-yoga.mp4" poster="media/video/move-yoga.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
       <div class="cls__body">
         <h3>Йога</h3>
         <p data-draft>Мягкая практика для гибкости, ровной спины и спокойной головы. Подходит и тем, кто впервые встаёт на коврик.</p>
       </div>
     </article>
     <article class="cls reveal">
-      <div class="cls__media"><video data-src="media/video/move-pilates.mp4" poster="media/video/move-pilates.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="cls__media"><video data-stock data-src="media/video/move-pilates.mp4" poster="media/video/move-pilates.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
       <div class="cls__body">
         <h3>Пилатес</h3>
         <p data-draft>Глубокие мышцы, осанка и подтянутый силуэт — бережно к суставам, но ощутимо уже после первых занятий.</p>
       </div>
     </article>
     <article class="cls reveal">
-      <div class="cls__media cls__media--tall"><video data-src="media/video/move-meditate.mp4" poster="media/video/move-meditate.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="cls__media cls__media--tall"><video data-stock data-src="media/video/move-meditate.mp4" poster="media/video/move-meditate.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
       <div class="cls__body">
         <h3>Медитации</h3>
         <p data-draft>Дыхание и тишина вместо бесконечного потока мыслей. Полчаса, после которых снова слышишь себя.</p>
@@ -181,7 +181,7 @@
   <div class="schedule reveal">
     <div>
       <h3>Расписание и&nbsp;запись</h3>
-      <p>Актуальное расписание групп и свободные места — в&nbsp;онлайн-записи. Выберите занятие и&nbsp;забронируйте место в&nbsp;пару касаний.</p>
+      <p data-draft>Актуальное расписание групп и свободные места — в&nbsp;онлайн-записи. Выберите занятие и&nbsp;забронируйте место в&nbsp;пару касаний.</p>
     </div>
     <a class="btn" href="{{yclients_classes|url}}" data-book="classes">Смотреть расписание</a>
   </div>
@@ -189,7 +189,7 @@
 
 <!-- Цитата на видео -->
 <section class="quote" aria-label="Цитата">
-  <video class="quote__video" data-src="media/video/move-namaste.mp4" poster="media/video/move-namaste.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+  <video data-stock class="quote__video" data-src="media/video/move-namaste.mp4" poster="media/video/move-namaste.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
   <p class="quote__text words" data-draft>Отдыхать — это тоже работа над&nbsp;собой.</p>
 </section>
 
@@ -198,7 +198,7 @@
   <div class="sec-head">
     <p class="eyebrow">03 — Пространство</p>
     <h2 id="space-title">Загляните к&nbsp;нам</h2>
-    <p class="lead">Арки с мягкой подсветкой, кресла, из которых не хочется вставать, и&nbsp;чай, который всегда готов. Листайте — это наше пространство.</p>
+    <p class="lead" data-draft>Арки с мягкой подсветкой, кресла, из которых не хочется вставать, и&nbsp;чай, который всегда готов. Листайте — это наше пространство.</p>
   </div>
   <div class="gallery" id="gallery" tabindex="0" aria-label="Фотографии пространства, листайте горизонтально">
     <figure class="g g--tall"><img src="img/space/reception-640.webp" data-full="img/space/reception.webp" alt="Ресепшн с аркой и логотипом" width="640" height="853" loading="lazy"><figcaption>Ресепшн</figcaption></figure>
@@ -278,7 +278,7 @@
     <div class="contacts__ctas">
       <a class="btn btn--gold" href="#book" data-book>Записаться</a>
       <a class="btn btn--ghost" href="tel:{{phone_href}}" data-goal="phone">Позвонить</a>
-      {{#if geo}}<a class="btn btn--ghost" href="https://yandex.ru/maps/?pt=37.618078,55.713134&amp;z=17&amp;l=map" target="_blank" rel="noopener">Маршрут</a>{{/if}}
+      {{#if geo}}<a class="btn btn--ghost" href="{{map_url}}" target="_blank" rel="noopener">Маршрут</a>{{/if}}
     </div>
   </div>
 </section>
