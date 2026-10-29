@@ -1,0 +1,30 @@
+{
+  "_comment": "Единственный источник фактов о компании. Неизвестное — {\"todo\": \"что нужно\"}, тексты, написанные студией без подтверждения клиента, — {\"draft\": \"значение\"}. Продакшен-сборка (python tools/build.py --prod) не запустится, пока остались todo/draft.",
+
+  "name": "Отдыхай и Худей",
+  "short_name": "ОХ",
+  "tagline": "Пространство спа-ритуалов и осознанного движения",
+  "city": "Москва",
+
+  "phone": "+7 992 234-71-73",
+  "phone_href": "+79922347173",
+
+  "address": {"draft": "Москва, Самаринская ул., 1, вход со двора"},
+  "address_street": {"draft": "Самаринская ул., 1"},
+  "metro": {"draft": "Даниловский рынок (МЦК), Тульская"},
+  "geo": {"draft": [55.713134, 37.618078]},
+  "hours": {"todo": "Часы работы"},
+
+  "email": {"todo": "E-mail"},
+  "whatsapp": {"todo": "WhatsApp"},
+  "telegram": {"todo": "Telegram"},
+  "instagram": {"draft": "https://www.instagram.com/prostranstvo.ox/"},
+
+  "yclients_spa": {"todo": "Ссылка YCLIENTS на запись в спа"},
+  "yclients_classes": {"todo": "Ссылка YCLIENTS на расписание зала"},
+  "yclients_certificates": {"todo": "Ссылка YCLIENTS на подарочные сертификаты"},
+
+  "legal_name": {"todo": "Юрлицо / ИП и ИНН"},
+  "site_url": {"todo": "Домен сайта"},
+  "staging_url": "https://otdihayihudey.example"
+}

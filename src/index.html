@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Отдыхай и Худей — спа-ритуалы, йога и пилатес в Москве</title>
+<meta name="description" content="Пространство «Отдыхай и Худей» в Москве: спа-ритуалы, йога, пилатес и медитации. Онлайн-запись на тренировки и ритуалы, подарочные сертификаты.">
+<meta name="robots" content="{{robots}}">
+<link rel="canonical" href="{{canonical}}">
+<meta name="theme-color" content="#2a211b">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Отдыхай и Худей">
+<meta property="og:title" content="Отдыхай и Худей — спа-ритуалы, йога и пилатес в Москве">
+<meta property="og:description" content="Два пространства под одной крышей: спа-ритуалы, чтобы отпустить, и светлый зал, чтобы вернуться в тело.">
+<meta property="og:url" content="{{canonical}}">
+<meta property="og:image" content="{{site_url}}/media/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preload" href="fonts/cormorant-cyrillic-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/plex-cyrillic-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="media/video/hero-spa.webp" as="image">
+<link rel="stylesheet" href="css/style.css?v={{ver}}">
+<script>document.documentElement.classList.add('js')</script>
+{{jsonld}}
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+
+<!-- Шапка -->
+<header class="hdr" id="hdr">
+  <a class="hdr__logo" href="./" aria-label="Отдыхай и Худей — на главную">
+    <svg viewBox="0 0 120 100" aria-hidden="true"><use href="#ox"/></svg>
+    <span>Отдыхай<br>и Худей</span>
+  </a>
+  <nav class="hdr__nav" id="nav" aria-label="Разделы">
+    <a href="#spa">Спа-ритуалы</a>
+    <a href="#hall">Зал</a>
+    <a href="#space">Пространство</a>
+    <a href="#gift">Сертификаты</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+  <button class="sound" id="sound" type="button" aria-pressed="false" aria-label="Включить звук пространства">
+    <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="sound__txt">Звук</span>
+  </button>
+  <a class="btn btn--sm hdr__cta" href="#book" data-book>Записаться</a>
+  <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav" aria-label="Меню"><i></i><i></i></button>
+</header>
+
+<main id="main">
+
+<!-- Первый экран: два мира -->
+<section class="hero" aria-labelledby="hero-title">
+  <a class="hero__panel hero__panel--spa" href="#spa">
+    <video class="hero__video" data-src="media/video/hero-spa.mp4" poster="media/video/hero-spa.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <span class="hero__label"><em>01</em>Спа-ритуалы<small>тепло · тишина · забота</small></span>
+  </a>
+  <a class="hero__panel hero__panel--move" href="#hall">
+    <video class="hero__video" data-src="media/video/hero-move.mp4" poster="media/video/hero-move.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <span class="hero__label"><em>02</em>Зал движения<small>йога · пилатес · медитации</small></span>
+  </a>
+  <div class="hero__center">
+    <h1 class="hero__title" id="hero-title"><span class="hero__w hero__w--l">Отдыхай</span> <span class="hero__amp">и</span> <span class="hero__w hero__w--r">Худей</span></h1>
+    <p class="hero__sub">Пространство спа-ритуалов и осознанного движения в Москве</p>
+    <div class="hero__ctas">
+      <a class="btn" href="#book" data-book>Записаться</a>
+      <a class="btn btn--ghost" href="#breath">Сделать паузу</a>
+    </div>
+  </div>
+  <span class="hero__scroll" aria-hidden="true">листайте медленно</span>
+</section>
+
+<!-- Манифест -->
+<section class="intro" id="about" aria-label="О пространстве">
+  <p class="intro__eyebrow">Добро пожаловать</p>
+  <p class="intro__text words" data-draft>Город остаётся за&nbsp;дверью. Здесь пахнет чаем и&nbsp;тёплым маслом, звучит тишина, а&nbsp;время идёт медленнее. Два пространства под одной крышей: спа-ритуалы, чтобы отпустить, и&nbsp;светлый зал, чтобы вернуться в&nbsp;тело.</p>
+  <div class="intro__pics">
+    <figure class="intro__pic intro__pic--a reveal"><img src="img/space/reception-arch-640.webp" alt="Ресепшн пространства «Отдыхай и Худей» с подсвеченной аркой" width="640" height="853" loading="lazy"></figure>
+    <figure class="intro__pic intro__pic--b reveal"><img src="img/space/tea-640.webp" alt="Чайный столик с чайником и пиалой у кресла" width="640" height="853" loading="lazy"></figure>
+    <figure class="intro__pic intro__pic--c reveal"><img src="img/space/lounge-chairs-640.webp" alt="Лаунж-зона с мягкими креслами и тёплым светом" width="640" height="853" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- Дыхательная пауза -->
+<section class="breath" id="breath" aria-labelledby="breath-title">
+  <video class="breath__video" data-src="media/video/breath-candles.mp4" poster="media/video/breath-candles.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+  <div class="breath__inner">
+    <h2 class="breath__title" id="breath-title">Сделайте паузу прямо сейчас</h2>
+    <p class="breath__lead">Минута дыхания — так начинается каждый визит к&nbsp;нам. Попробуйте.</p>
+    <div class="breath__circle" id="breathCircle" aria-live="polite">
+      <span class="breath__ring" aria-hidden="true"></span>
+      <span class="breath__word" id="breathWord">готовы?</span>
+      <span class="breath__count" id="breathCount" aria-hidden="true"></span>
+    </div>
+    <button class="btn btn--light" id="breathBtn" type="button">Начать дыхание</button>
+  </div>
+</section>
+
+<!-- Спа-ритуалы -->
+<section class="spa" id="spa" aria-labelledby="spa-title">
+  <div class="sec-head sec-head--dark">
+    <p class="eyebrow">01 — Спа-ритуалы</p>
+    <h2 id="spa-title">Ритуал, который начинается с&nbsp;чашки чая</h2>
+    <p class="lead" data-draft>Спа-ритуал у нас — это не просто процедура, а&nbsp;пара часов, когда никуда не нужно спешить. Бронируйте время онлайн — мы подготовим кабинет к&nbsp;вашему приходу.</p>
+  </div>
+
+  <div class="story" id="story">
+    <div class="story__stage" aria-hidden="true">
+      <video class="story__v is-on" data-src="media/video/ritual-tea.mp4" poster="media/video/ritual-tea.webp" muted loop playsinline preload="none"></video>
+      <video class="story__v" data-src="media/video/ritual-candles.mp4" poster="media/video/ritual-candles.webp" muted loop playsinline preload="none"></video>
+      <video class="story__v" data-src="media/video/ritual-hands.mp4" poster="media/video/ritual-hands.webp" muted loop playsinline preload="none"></video>
+      <video class="story__v" data-src="media/video/ritual-quiet.mp4" poster="media/video/ritual-quiet.webp" muted loop playsinline preload="none"></video>
+      <div class="story__progress"><i></i><i></i><i></i><i></i></div>
+    </div>
+    <ol class="story__steps" data-draft>
+      <li class="story__step"><span class="story__n">I</span><h3>Встреча</h3><p>Вас встречают чаем. Телефон можно отложить — здесь он&nbsp;не&nbsp;нужен.</p></li>
+      <li class="story__step"><span class="story__n">II</span><h3>Тепло</h3><p>Мягкий свет, свечи, тёплые полотенца. Тело начинает отпускать напряжение.</p></li>
+      <li class="story__step"><span class="story__n">III</span><h3>Руки мастера</h3><p>Ритуал подбирается под ваше состояние: расслабить, восстановить, вернуть лёгкость.</p></li>
+      <li class="story__step"><span class="story__n">IV</span><h3>Тишина</h3><p>После ритуала — время просто полежать и&nbsp;допить чай. Никто не торопит.</p></li>
+    </ol>
+  </div>
+
+  <div class="rituals" data-draft>
+    <article class="ritual reveal">
+      <div class="ritual__media"><video data-src="media/video/spa-back.mp4" poster="media/video/spa-back.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <h3>Расслабляющие ритуалы</h3>
+      <p>Массаж с тёплым маслом, чтобы снять усталость недели и выспаться так, как давно не получалось.</p>
+      <a class="link" href="{{yclients_spa|url}}" data-book="spa">Выбрать время</a>
+    </article>
+    <article class="ritual reveal">
+      <div class="ritual__media"><img src="img/space/room-curtains-640.webp" alt="Кабинет для спа-ритуалов с мягким светом и шторами" width="640" height="480" loading="lazy"></div>
+      <h3>Ритуалы лёгкости</h3>
+      <p>Лимфодренаж и моделирующие техники — для лёгкости в теле и красивого силуэта.</p>
+      <a class="link" href="{{yclients_spa|url}}" data-book="spa">Выбрать время</a>
+    </article>
+    <article class="ritual reveal">
+      <div class="ritual__media"><video data-src="media/video/ritual-silence.mp4" poster="media/video/ritual-silence.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <h3>Ритуалы для лица</h3>
+      <p>Лифтинг-массаж и уход, после которых лицо выглядит отдохнувшим — даже если неделя была длинной.</p>
+      <a class="link" href="{{yclients_spa|url}}" data-book="spa">Выбрать время</a>
+    </article>
+  </div>
+  <p class="spa__note">Длительность и стоимость каждого ритуала видны при онлайн-бронировании.</p>
+  <div class="center"><a class="btn btn--gold" href="{{yclients_spa|url}}" data-book="spa">Забронировать спа-ритуал</a></div>
+</section>
+
+<!-- Зал -->
+<section class="hall" id="hall" aria-labelledby="hall-title">
+  <div class="sec-head">
+    <p class="eyebrow">02 — Зал</p>
+    <h2 id="hall-title">Светлый зал, где тело вспоминает лёгкость</h2>
+    <p class="lead" data-draft>Йога, пилатес и медитации в небольших группах. Без спешки, без сравнений, в своём темпе — с&nbsp;вниманием тренера к&nbsp;каждому.</p>
+  </div>
+  <div class="classes">
+    <article class="cls reveal">
+      <div class="cls__media"><video data-src="media/video/move-stretch.mp4" poster="media/video/move-stretch.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="cls__body">
+        <h3>Йога</h3>
+        <p data-draft>Мягкая практика для гибкости, ровной спины и спокойной головы. Подходит и тем, кто впервые встаёт на коврик.</p>
+      </div>
+    </article>
+    <article class="cls reveal">
+      <div class="cls__media"><video data-src="media/video/move-pilates.mp4" poster="media/video/move-pilates.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="cls__body">
+        <h3>Пилатес</h3>
+        <p data-draft>Глубокие мышцы, осанка и подтянутый силуэт — бережно к суставам, но ощутимо уже после первых занятий.</p>
+      </div>
+    </article>
+    <article class="cls reveal">
+      <div class="cls__media cls__media--tall"><video data-src="media/video/move-meditate.mp4" poster="media/video/move-meditate.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="cls__body">
+        <h3>Медитации</h3>
+        <p data-draft>Дыхание и тишина вместо бесконечного потока мыслей. Полчаса, после которых снова слышишь себя.</p>
+      </div>
+    </article>
+  </div>
+  <div class="schedule reveal">
+    <div>
+      <h3>Расписание и&nbsp;запись</h3>
+      <p>Актуальное расписание групп и свободные места — в&nbsp;онлайн-записи. Выберите занятие и&nbsp;забронируйте место в&nbsp;пару касаний.</p>
+    </div>
+    <a class="btn" href="{{yclients_classes|url}}" data-book="classes">Смотреть расписание</a>
+  </div>
+</section>
+
+<!-- Цитата на видео -->
+<section class="quote" aria-label="Цитата">
+  <video class="quote__video" data-src="media/video/move-namaste.mp4" poster="media/video/move-namaste.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+  <p class="quote__text words" data-draft>Отдыхать — это тоже работа над&nbsp;собой.</p>
+</section>
+
+<!-- Пространство: реальные фото -->
+<section class="space" id="space" aria-labelledby="space-title">
+  <div class="sec-head">
+    <p class="eyebrow">03 — Пространство</p>
+    <h2 id="space-title">Загляните к&nbsp;нам</h2>
+    <p class="lead">Арки с мягкой подсветкой, кресла, из которых не хочется вставать, и&nbsp;чай, который всегда готов. Листайте — это наше пространство.</p>
+  </div>
+  <div class="gallery" id="gallery" tabindex="0" aria-label="Фотографии пространства, листайте горизонтально">
+    <figure class="g g--tall"><img src="img/space/reception-640.webp" data-full="img/space/reception.webp" alt="Ресепшн с аркой и логотипом" width="640" height="853" loading="lazy"><figcaption>Ресепшн</figcaption></figure>
+    <figure class="g g--wide"><img src="img/space/room-white-640.webp" data-full="img/space/room-white.webp" alt="Светлый кабинет с кушеткой и комодом" width="640" height="480" loading="lazy"><figcaption>Кабинет</figcaption></figure>
+    <figure class="g g--tall"><img src="img/space/lounge-arch-640.webp" data-full="img/space/lounge-arch.webp" alt="Диван у подсвеченной арки в зоне ожидания" width="640" height="853" loading="lazy"><figcaption>Зона ожидания</figcaption></figure>
+    <figure class="g g--tall"><img src="img/space/tea-640.webp" data-full="img/space/tea.webp" alt="Чайник и пиала на золотом столике" width="640" height="853" loading="lazy"><figcaption>Чайная пауза</figcaption></figure>
+    <figure class="g g--wide"><img src="img/space/room-window-640.webp" data-full="img/space/room-window.webp" alt="Кабинет с окном, шторами и кушеткой" width="640" height="427" loading="lazy"><figcaption>Кабинет у окна</figcaption></figure>
+    <figure class="g g--tall"><img src="img/space/lounge-light-640.webp" data-full="img/space/lounge-light.webp" alt="Два мягких кресла в коридоре с бра" width="640" height="853" loading="lazy"><figcaption>Лаунж</figcaption></figure>
+    <figure class="g g--wide"><img src="img/space/room-curtains-640.webp" data-full="img/space/room-curtains.webp" alt="Кабинет в тёплых тонах с кушеткой" width="640" height="480" loading="lazy"><figcaption>Тёплый кабинет</figcaption></figure>
+    <figure class="g g--tall"><img src="img/space/corridor-640.webp" data-full="img/space/corridor.webp" alt="Коридор с глянцевым полом и аркой в конце" width="576" height="768" loading="lazy"><figcaption>Путь к&nbsp;тишине</figcaption></figure>
+  </div>
+  <p class="gallery__hint" aria-hidden="true">← листайте →</p>
+</section>
+
+<!-- Сертификаты -->
+<section class="gift" id="gift" aria-labelledby="gift-title">
+  <div class="gift__card-wrap">
+    <div class="gift__card" id="giftCard">
+      <svg viewBox="0 0 120 100" aria-hidden="true"><use href="#ox"/></svg>
+      <span class="gift__card-kind">Подарочный сертификат</span>
+      <span class="gift__card-name">Отдыхай<br>и Худей</span>
+      <span class="gift__card-for">время для себя</span>
+    </div>
+  </div>
+  <div class="gift__text">
+    <p class="eyebrow">04 — Подарок</p>
+    <h2 id="gift-title">Подарите время для&nbsp;себя</h2>
+    <p class="lead" data-draft>Сертификат на спа-ритуал или занятия в&nbsp;зале — подарок, который ощущается, а&nbsp;не&nbsp;пылится на&nbsp;полке. Оформляется онлайн за&nbsp;пару минут.</p>
+    <a class="btn btn--gold" href="{{yclients_certificates|url}}" data-book="certificates">Купить сертификат</a>
+  </div>
+</section>
+
+<!-- Вопросы -->
+<section class="faq" id="faq" aria-labelledby="faq-title">
+  <div class="sec-head">
+    <p class="eyebrow">05 — Вопросы</p>
+    <h2 id="faq-title">Перед первым визитом</h2>
+  </div>
+  <div class="faq__list" data-draft>
+    <details class="faq__item">
+      <summary>Как записаться на спа-ритуал или тренировку?</summary>
+      <div class="faq__a"><p>Онлайн через систему записи YCLIENTS — кнопка «Записаться» на сайте — или по телефону {{phone}}. Для спа-ритуала выберите удобное время, для тренировки — занятие в расписании зала.</p></div>
+    </details>
+    <details class="faq__item">
+      <summary>Что взять с собой на йогу или пилатес?</summary>
+      <div class="faq__a"><p>Удобную одежду, в которой легко двигаться, и бутылку воды. Занимаются босиком или в носках. Приходите за 10 минут до начала, чтобы спокойно переодеться.</p></div>
+    </details>
+    <details class="faq__item">
+      <summary>Нужно ли приходить заранее на спа-ритуал?</summary>
+      <div class="faq__a"><p>Лучше за 10–15 минут: успеете выпить чаю, переодеться и переключиться. Всё необходимое для ритуала — полотенца, халат, тапочки — мы подготовим.</p></div>
+    </details>
+    <details class="faq__item">
+      <summary>Можно ли подарить сертификат?</summary>
+      <div class="faq__a"><p>Да. Подарочный сертификат на спа-ритуал или занятия в зале можно купить онлайн на сайте или оформить у администратора.</p></div>
+    </details>
+    <details class="faq__item">
+      <summary>Где вы находитесь?</summary>
+      <div class="faq__a"><p>В Москве: {{address}}. Ближайшие станции — {{metro}}.</p></div>
+    </details>
+  </div>
+</section>
+
+<!-- Контакты -->
+<section class="contacts" id="contacts" aria-labelledby="contacts-title">
+  <img class="contacts__bg" src="img/space/facade.webp" alt="" width="960" height="1280" loading="lazy">
+  <div class="contacts__inner">
+    <p class="eyebrow">Контакты</p>
+    <h2 id="contacts-title">Ждём вас в&nbsp;тишине</h2>
+    <dl class="contacts__list">
+      <div><dt>Телефон</dt><dd><a href="tel:{{phone_href}}" data-goal="phone">{{phone}}</a></dd></div>
+      <div><dt>Адрес</dt><dd>{{address}}</dd></div>
+      <div><dt>Метро</dt><dd>{{metro}}</dd></div>
+      <div><dt>Часы работы</dt><dd>{{hours}}</dd></div>
+      <div><dt>Мессенджеры</dt><dd>{{#if whatsapp}}<a href="https://wa.me/{{whatsapp|raw}}" target="_blank" rel="noopener">WhatsApp</a> {{/if}}{{#if telegram}}<a href="https://t.me/{{telegram|raw}}" target="_blank" rel="noopener">Telegram</a>{{/if}}{{#ifnot whatsapp}}{{whatsapp}}{{/ifnot}}</dd></div>
+      {{#if instagram}}<div><dt>Соцсети</dt><dd><a href="{{instagram|raw}}" target="_blank" rel="noopener">Instagram*</a></dd></div>{{/if}}
+    </dl>
+    <div class="contacts__ctas">
+      <a class="btn btn--gold" href="#book" data-book>Записаться</a>
+      <a class="btn btn--ghost" href="tel:{{phone_href}}" data-goal="phone">Позвонить</a>
+      {{#if geo}}<a class="btn btn--ghost" href="https://yandex.ru/maps/?pt=37.618078,55.713134&amp;z=17&amp;l=map" target="_blank" rel="noopener">Маршрут</a>{{/if}}
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ftr">
+  <div class="ftr__top">
+    <a class="ftr__logo" href="./" aria-label="На главную"><svg viewBox="0 0 120 100" aria-hidden="true"><use href="#ox"/></svg><span>Отдыхай и&nbsp;Худей</span></a>
+    <nav class="ftr__nav" aria-label="Разделы в подвале">
+      <a href="#spa">Спа-ритуалы</a><a href="#hall">Зал</a><a href="#space">Пространство</a><a href="#gift">Сертификаты</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+    </nav>
+    <a class="ftr__phone" href="tel:{{phone_href}}" data-goal="phone">{{phone}}</a>
+  </div>
+  <div class="ftr__bottom">
+    <span>© {{year}} {{name}}</span>
+    <a href="politika-konfidentsialnosti.html">Политика конфиденциальности</a>
+    <a class="ftr__credit" href="https://sitomika.ru/?utm_source=client_site&amp;utm_medium=footer&amp;utm_campaign={{utm_campaign}}" target="_blank" rel="noopener">Разработано в sitomika.ru</a>
+  </div>
+  {{#if instagram}}<p class="ftr__meta">* Instagram принадлежит компании Meta, признанной экстремистской организацией и запрещённой в РФ.</p>{{/if}}
+</footer>
+
+<!-- Мобильная панель -->
+<div class="mbar" id="mbar">
+  <a href="tel:{{phone_href}}" data-goal="phone">Позвонить</a>
+  <a class="mbar__main" href="#book" data-book>Записаться</a>
+</div>
+
+<!-- Окно записи -->
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-title" hidden>
+  <div class="sheet__back" data-close></div>
+  <div class="sheet__box">
+    <button class="sheet__x" type="button" data-close aria-label="Закрыть">×</button>
+    <h2 class="sheet__title" id="sheet-title">Куда записываемся?</h2>
+    <div class="sheet__opts">
+      <a class="opt" href="{{yclients_spa|url}}" data-book="spa" data-direct><span class="opt__k">Спа-ритуал</span><span class="opt__d">забронировать время</span></a>
+      <a class="opt" href="{{yclients_classes|url}}" data-book="classes" data-direct><span class="opt__k">Тренировка в зале</span><span class="opt__d">йога · пилатес · медитации</span></a>
+      <a class="opt" href="{{yclients_certificates|url}}" data-book="certificates" data-direct><span class="opt__k">Подарочный сертификат</span><span class="opt__d">оформить онлайн</span></a>
+    </div>
+    <div class="sheet__soon" hidden>
+      <p>Онлайн-запись подключаем прямо сейчас. Пока запишем вас по телефону — это займёт минуту.</p>
+      <a class="btn btn--gold" href="tel:{{phone_href}}" data-goal="phone">{{phone}}</a>
+    </div>
+  </div>
+</div>
+
+<!-- Лайтбокс -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Фотография" hidden>
+  <button class="lb__x" type="button" aria-label="Закрыть">×</button>
+  <img alt="">
+</div>
+
+<div class="cookie" id="cookie" hidden>
+  <p>Сайт использует cookie и локальное хранилище браузера только для работы: например, чтобы запомнить, что вы закрыли это сообщение. Подробнее — в&nbsp;<a href="politika-konfidentsialnosti.html">политике конфиденциальности</a>.</p>
+  <button class="btn btn--sm" type="button" id="cookieOk">Понятно</button>
+</div>
+
+<audio id="ambient" src="media/audio/ambient.mp3" loop preload="none"></audio>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ox" viewBox="0 0 120 100"><path fill="currentColor" fill-rule="evenodd" d="M40 4C18.5 4 4 22.5 4 45s14.5 41 36 41 36-18.5 36-41S61.5 4 40 4zm1 3.2c-12 0-19.5 17-19.5 37.8S29 82.8 41 82.8 60.5 65.8 60.5 45 53 7.2 41 7.2z"/><path fill="currentColor" d="M51 31h13l42 63H93zM98 31h2.6L57 94h-2.6zM46 30.2h22v1.6H46zM91 30.2h16v1.6H91zM50 93.2h13v1.6H50zM88 93.2h22v1.6H88z"/></symbol>
+</svg>
+
+<script src="js/main.js?v={{ver}}" defer></script>
+</body>
+</html>
