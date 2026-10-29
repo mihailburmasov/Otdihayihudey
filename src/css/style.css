@@ -388,5 +388,21 @@ p{margin:0 0 1em}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+/* Телефоны: кадры вместо видео, без тяжёлых эффектов */
+video{pointer-events:none}
+.cls__media img{width:100%;height:100%;object-fit:cover}
+.cls__media img,.cls__media video{object-position:center 20%}
+.kb{animation:kb 16s ease-in-out infinite alternate;animation-play-state:paused;will-change:transform}
+.kb.kb-run{animation-play-state:running}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.14) translate3d(-2%,-1.5%,0)}}
+.hero__frame{opacity:0;transition:opacity 1.8s var(--ease)}
+.hero__frame.is-on{opacity:1}
+.lite body::after{display:none}
+.lite .hdr.is-solid{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(245,239,231,.97)}
+.lite .hdr.is-dark{background:rgba(42,33,27,.96)}
+.lite .mbar{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(42,33,27,.96)}
+.lite .sheet__back{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(28,21,17,.75)}
+.lite .contacts__bg{filter:none}
+
 /* Режим скриншота: всё раскрыто */
 .shot .reveal,.shot .words span,.shot .story__step > *{opacity:1!important;transform:none!important}

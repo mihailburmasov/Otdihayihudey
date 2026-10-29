@@ -56,11 +56,11 @@
 <!-- Первый экран: два мира -->
 <section class="hero" aria-labelledby="hero-title">
   <a class="hero__panel hero__panel--spa" href="#spa">
-    <video data-stock class="hero__video" data-src="media/video/hero-spa.mp4" poster="media/video/hero-spa.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <video data-stock class="hero__video" data-src="media/video/hero-spa.mp4" data-frames="media/video/hero-spa.webp,media/video/hero-spa-1.webp,media/video/hero-spa-2.webp,media/video/hero-spa-3.webp" poster="media/video/hero-spa.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none" aria-hidden="true"></video>
     <span class="hero__label"><em>01</em>Спа-ритуалы<small>тепло · тишина · забота</small></span>
   </a>
   <a class="hero__panel hero__panel--move" href="#hall">
-    <video data-stock class="hero__video" data-src="media/video/hero-move.mp4" poster="media/video/hero-move.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+    <video data-stock class="hero__video" data-src="media/video/hero-move.mp4" data-frames="media/video/hero-move.webp,media/video/hero-move-3.webp,media/video/hero-move-1.webp,media/video/hero-move-2.webp" poster="media/video/hero-move.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none" aria-hidden="true"></video>
     <span class="hero__label"><em>02</em>Зал движения<small>йога · пилатес · медитации</small></span>
   </a>
   <div class="hero__center">
@@ -87,7 +87,7 @@
 
 <!-- Дыхательная пауза -->
 <section class="breath" id="breath" aria-labelledby="breath-title">
-  <video data-stock class="breath__video" data-src="media/video/breath-candles.mp4" poster="media/video/breath-candles.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+  <video data-stock class="breath__video" data-src="media/video/breath-candles.mp4" poster="media/video/breath-candles.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none" aria-hidden="true"></video>
   <div class="breath__inner">
     <h2 class="breath__title" id="breath-title">Сделайте паузу прямо сейчас</h2>
     <p class="breath__lead" data-draft>Минута дыхания — так начинается каждый визит к&nbsp;нам. Попробуйте.</p>
@@ -111,9 +111,9 @@
   <div class="story" id="story">
     <div class="story__stage" aria-hidden="true">
       <img class="story__v is-on" src="img/space/tea.webp" alt="" width="960" height="1280" loading="lazy">
-      <video data-stock class="story__v" data-src="media/video/ritual-candles.mp4" poster="media/video/ritual-candles.webp" muted loop playsinline preload="none"></video>
-      <video data-stock class="story__v" data-src="media/video/ritual-hands.mp4" poster="media/video/ritual-hands.webp" muted loop playsinline preload="none"></video>
-      <video data-stock class="story__v" data-src="media/video/ritual-quiet.mp4" poster="media/video/ritual-quiet.webp" muted loop playsinline preload="none"></video>
+      <video data-stock class="story__v" data-src="media/video/ritual-candles.mp4" poster="media/video/ritual-candles.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none"></video>
+      <video data-stock class="story__v" data-src="media/video/ritual-hands.mp4" poster="media/video/ritual-hands.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none"></video>
+      <video data-stock class="story__v" data-src="media/video/ritual-quiet.mp4" poster="media/video/ritual-quiet.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none"></video>
       <div class="story__progress"><i></i><i></i><i></i><i></i></div>
     </div>
     <ol class="story__steps" data-draft>
@@ -126,7 +126,7 @@
 
   <div class="rituals" data-draft>
     <article class="ritual reveal">
-      <div class="ritual__media"><video data-stock data-src="media/video/spa-massage.mp4" poster="media/video/spa-massage.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="ritual__media"><video data-stock data-src="media/video/spa-massage.mp4" poster="media/video/spa-massage.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none" aria-hidden="true"></video></div>
       <h3>Расслабляющие ритуалы</h3>
       <p>Массаж с тёплым маслом, чтобы снять усталость недели и выспаться так, как давно не получалось.</p>
       <a class="link" href="{{yclients_spa|url}}" data-book="spa">Выбрать время</a>
@@ -138,7 +138,7 @@
       <a class="link" href="{{yclients_spa|url}}" data-book="spa">Выбрать время</a>
     </article>
     <article class="ritual reveal">
-      <div class="ritual__media"><video data-stock data-src="media/video/ritual-silence.mp4" poster="media/video/ritual-silence.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="ritual__media"><video data-stock data-src="media/video/ritual-silence.mp4" poster="media/video/ritual-silence.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none" aria-hidden="true"></video></div>
       <h3>Ритуалы для лица</h3>
       <p>Лифтинг-массаж и уход, после которых лицо выглядит отдохнувшим — даже если неделя была длинной.</p>
       <a class="link" href="{{yclients_spa|url}}" data-book="spa">Выбрать время</a>
@@ -157,21 +157,21 @@
   </div>
   <div class="classes">
     <article class="cls reveal">
-      <div class="cls__media"><video data-stock data-src="media/video/move-yoga.mp4" poster="media/video/move-yoga.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="cls__media"><video data-stock data-src="media/video/move-yoga.mp4" poster="media/video/move-yoga.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none" aria-hidden="true"></video></div>
       <div class="cls__body">
         <h3>Йога</h3>
         <p data-draft>Мягкая практика для гибкости, ровной спины и спокойной головы. Подходит и тем, кто впервые встаёт на коврик.</p>
       </div>
     </article>
     <article class="cls reveal">
-      <div class="cls__media"><video data-stock data-src="media/video/move-pilates.mp4" poster="media/video/move-pilates.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="cls__media"><video data-stock data-src="media/video/move-pilates.mp4" poster="media/video/move-pilates.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none" aria-hidden="true"></video></div>
       <div class="cls__body">
         <h3>Пилатес</h3>
         <p data-draft>Глубокие мышцы, осанка и подтянутый силуэт — бережно к суставам, но ощутимо уже после первых занятий.</p>
       </div>
     </article>
     <article class="cls reveal">
-      <div class="cls__media cls__media--tall"><video data-stock data-src="media/video/move-meditate.mp4" poster="media/video/move-meditate.webp" muted loop playsinline preload="none" aria-hidden="true"></video></div>
+      <div class="cls__media cls__media--tall"><video data-stock data-src="media/video/move-meditate.mp4" poster="media/video/move-meditate.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none" aria-hidden="true"></video></div>
       <div class="cls__body">
         <h3>Медитации</h3>
         <p data-draft>Дыхание и тишина вместо бесконечного потока мыслей. Полчаса, после которых снова слышишь себя.</p>
@@ -189,7 +189,7 @@
 
 <!-- Цитата на видео -->
 <section class="quote" aria-label="Цитата">
-  <video data-stock class="quote__video" data-src="media/video/move-namaste.mp4" poster="media/video/move-namaste.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+  <video data-stock class="quote__video" data-src="media/video/move-namaste.mp4" poster="media/video/move-namaste.webp" muted loop playsinline webkit-playsinline disablepictureinpicture disableremoteplayback preload="none" aria-hidden="true"></video>
   <p class="quote__text words" data-draft>Отдыхать — это тоже работа над&nbsp;собой.</p>
 </section>
 

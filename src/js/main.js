@@ -18,11 +18,46 @@
   const hero = $('.hero');
   requestAnimationFrame(() => setTimeout(() => hero && hero.classList.add('is-ready'), 120));
 
-  /* Видео: грузим только когда видно, без звука; при reduced-motion и экономии трафика — постер */
+  /* Телефоны: браузеры вешают на <video> свой плеер с бегунком и перехватывают касания,
+     а несколько видео сразу тормозят прокрутку. Вместо видео — кадры с медленным наплывом. */
+  const lite = reduce || saveData || matchMedia('(max-width: 820px), (hover: none)').matches;
+  root.classList.toggle('lite', lite);
+  if (lite) {
+    $$('video[data-src]').forEach(v => {
+      const frames = v.dataset.frames ? v.dataset.frames.split(',') : [v.getAttribute('poster')];
+      const inHero = !!v.closest('.hero');
+      const wrap = document.createDocumentFragment();
+      frames.forEach((src, i) => {
+        const img = new Image();
+        img.className = v.className + ' kb' + (frames.length > 1 ? ' hero__frame' + (i ? '' : ' is-on') : '');
+        img.alt = ''; img.decoding = 'async';
+        if (!inHero) img.loading = 'lazy';
+        img.src = i ? src : v.getAttribute('poster');
+        wrap.appendChild(img);
+      });
+      v.replaceWith(wrap);
+    });
+    // смена кадров на первом экране
+    if (!reduce) setInterval(() => {
+      if (scrollY > innerHeight) return;
+      $$('.hero__panel').forEach(p => {
+        const fr = $$('.hero__frame', p); if (fr.length < 2) return;
+        const i = fr.findIndex(f => f.classList.contains('is-on'));
+        fr[i].classList.remove('is-on'); fr[(i + 1) % fr.length].classList.add('is-on');
+      });
+    }, 4200);
+    // наплыв работает только у кадров на экране
+    if ('IntersectionObserver' in window) {
+      const kio = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('kb-run', e.isIntersecting)));
+      $$('.kb').forEach(el => kio.observe(el));
+    }
+  }
+
+  /* Видео (компьютер): грузим только когда видно, без звука */
   const videos = $$('video[data-src]');
   const load = v => { if (!v.src && v.dataset.src) { v.src = v.dataset.src; } };
   const play = v => { if (v.tagName !== 'VIDEO') return; load(v); const p = v.play(); if (p) p.catch(() => {}); };
-  if (!reduce && !saveData && 'IntersectionObserver' in window) {
+  if (!lite && 'IntersectionObserver' in window) {
     const vio = new IntersectionObserver(es => es.forEach(e => {
       const v = e.target;
       if (v.classList.contains('story__v')) return; // ими управляет сюжет
@@ -82,7 +117,7 @@
   }
 
   /* Лёгкий параллакс */
-  const par = reduce ? [] : [
+  const par = lite ? [] : [
     ...$$('.intro__pic img').map((el, i) => ({ el, k: [.06, -.08, .1][i] })),
     ...$$('.quote__video').map(el => ({ el, k: .12 }))
   ];
@@ -113,7 +148,7 @@
     if (i === cur) return; cur = i;
     sv.forEach((v, j) => {
       v.classList.toggle('is-on', j === i);
-      if (j === i) { if (!reduce && !saveData) play(v); } else if (v.pause) v.pause();
+      if (j === i) { if (!lite) play(v); } else if (v.pause) v.pause();
     });
     bars.forEach((b, j) => b.classList.toggle('is-on', j <= i));
   };
@@ -125,7 +160,7 @@
   }
   // подгружаем первое видео сюжета, когда секция близко
   const story = $('#story');
-  if (story && !reduce && !saveData && 'IntersectionObserver' in window) {
+  if (story && !lite && 'IntersectionObserver' in window) {
     const pre = new IntersectionObserver(es => { if (es[0].isIntersecting) { load(sv[1]); pre.disconnect(); } }, { rootMargin: '600px 0px' });
     pre.observe(story);
   }
@@ -250,7 +285,11 @@
     $('#cookieOk').addEventListener('click', () => { ck.hidden = true; store.set('ox-cookie', '1'); });
   }
 
-  addEventListener('scroll', () => requestAnimationFrame(onScroll), { passive: true });
+  let ticking = false;
+  addEventListener('scroll', () => {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(() => { onScroll(); ticking = false; });
+  }, { passive: true });
   addEventListener('resize', onScroll);
   onScroll();
 })();
