@@ -144,8 +144,12 @@ for p in DIST.iterdir():  # чистим содержимое, а не саму 
     shutil.rmtree(p) if p.is_dir() else p.unlink()
 for d in ("css", "js", "img", "media", "fonts"):
     shutil.copytree(SRC / d, DIST / d)
+base = re.sub(r"^https?://[^/]+", "", site_url)  # подпапка сайта, например /Otdihayihudey на github.io
 for name, path in PAGES.items():
-    (DIST / name).write_text(render((SRC / name).read_text(encoding="utf-8"), path), encoding="utf-8")
+    text = render((SRC / name).read_text(encoding="utf-8"), path)
+    if path is None:  # 404 открывается на любой глубине — пути от корня сайта
+        text = re.sub(r'(href|src)="/', lambda m: f'{m.group(1)}="{base}/', text)
+    (DIST / name).write_text(text, encoding="utf-8")
 
 (DIST / "robots.txt").write_text(
     ("User-agent: *\nAllow: /\n\n" if PROD else "User-agent: *\nDisallow: /\n\n") + f"Sitemap: {site_url}/sitemap.xml\n", encoding="utf-8")
